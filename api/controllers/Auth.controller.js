@@ -36,6 +36,6 @@ export const Signup = async (req, res, next) => {
       message: "User created successfully",
     });
   } catch (error) {
-    next(error);
+    next(ErrorHandler(500, "Duplicate username or email"));
   }
 };
